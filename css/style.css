@@ -1,0 +1,7057 @@
+/* ==================================================
+   ROYA BRICKX
+   MAIN RESPONSIVE STYLES
+================================================== */
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    background: #07080c;
+    color: #e7c98f;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: min(1180px, 88%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 0;
+
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    color: #e4c48a;
+
+    z-index: 110;
+}
+
+.logo-symbol {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 3.2vw, 48px);
+
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+.logo-text {
+    font-size: clamp(13px, 1.2vw, 17px);
+
+    letter-spacing: clamp(4px, 0.5vw, 7px);
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(22px, 2.5vw, 38px);
+}
+
+.nav-link {
+    position: relative;
+
+    font-size: 13px;
+
+    color: #d7bb87;
+
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f1d6a2;
+}
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 1px;
+
+    background: #d7b87b;
+}
+
+.application-link {
+    padding: 14px 24px;
+
+    border:
+        1px solid
+        rgba(215, 184, 123, 0.7);
+
+    border-radius: 3px;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    z-index: 110;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 25px;
+    height: 1px;
+
+    margin: 6px auto;
+
+    background: #e4c48a;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        url("../assets/images/Background.png");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   HERO OVERLAY
+========================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 5, 9, 0.32) 0%,
+            rgba(4, 5, 9, 0.16) 37%,
+            rgba(4, 5, 9, 0.04) 70%,
+            rgba(4, 5, 9, 0.02) 100%
+        );
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    padding-top: clamp(70px, 8vh, 110px);
+}
+
+.hero-eyebrow {
+    margin-bottom: clamp(20px, 3vh, 30px);
+
+    font-size: clamp(10px, 0.9vw, 13px);
+
+    letter-spacing: clamp(2px, 0.3vw, 4px);
+
+    color: #caae7c;
+}
+
+.hero-eyebrow span {
+    margin: 0 8px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero-title {
+    max-width: 850px;
+
+    margin-bottom: clamp(22px, 3vh, 32px);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(46px, 5vw, 78px);
+
+    font-weight: 400;
+
+    line-height: 1.12;
+
+    letter-spacing: clamp(1px, 0.2vw, 3px);
+
+    color: #e8c993;
+}
+
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.hero-description {
+    margin-bottom: clamp(26px, 4vh, 36px);
+
+    font-size: clamp(14px, 1.05vw, 16px);
+
+    line-height: 1.7;
+
+    color: #d2bc94;
+}
+
+
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding: 15px 25px;
+
+    color: #17130d;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7c98f,
+            #c49c5e
+        );
+
+    border-radius: 3px;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 30px
+        rgba(211, 175, 111, 0.2);
+}
+
+
+/* =========================
+   HERO FEATURES
+========================= */
+
+.hero-features {
+    position: absolute;
+
+    right: 6%;
+    bottom: 32px;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: clamp(9px, 0.8vw, 11px);
+
+    color: #c7ad7e;
+}
+
+.separator {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   PLACEHOLDER SECTIONS
+========================= */
+
+.section-placeholder {
+    min-height: 70vh;
+
+    padding: clamp(80px, 10vw, 120px) 0;
+
+    background: #08090d;
+
+    border-top:
+        1px solid
+        rgba(214, 182, 122, 0.15);
+}
+
+.section-placeholder h2 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(34px, 4vw, 45px);
+
+    font-weight: 400;
+
+    color: #e3c58e;
+}
+
+
+/* ==================================================
+   SMALL LAPTOP / TABLET
+================================================== */
+
+@media (max-width: 1199px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        padding: 24px 0;
+    }
+
+    .nav-menu {
+        gap: 22px;
+    }
+
+    .hero {
+        background-position: 58% center;
+    }
+
+    .hero-title {
+        font-size: clamp(48px, 6vw, 68px);
+    }
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .logo-text {
+        letter-spacing: 3px;
+    }
+
+    .nav-menu {
+        gap: 14px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .application-link {
+        padding: 11px 14px;
+    }
+
+    .hero {
+        background-position: 62% center;
+    }
+
+    .hero-title {
+        font-size: clamp(45px, 7vw, 60px);
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+    .container {
+        width: 88%;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        padding: 18px 0;
+    }
+
+    .logo-symbol {
+        font-size: 36px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* MOBILE NAVIGATION */
+
+    .nav-menu {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: min(320px, 82vw);
+
+        height: 100vh;
+        height: 100dvh;
+
+        padding: 110px 36px 40px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: flex-start;
+
+        gap: 30px;
+
+        background:
+            rgba(5, 7, 14, 0.97);
+
+        backdrop-filter: blur(16px);
+
+        border-left:
+            1px solid
+            rgba(215, 184, 123, 0.18);
+
+        transition: right 0.35s ease;
+
+        z-index: 105;
+    }
+
+    .nav-menu.open {
+        right: 0;
+    }
+
+    .nav-link {
+        width: 100%;
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .application-link {
+        width: auto;
+
+        padding: 13px 20px;
+    }
+
+
+    /* HAMBURGER ANIMATION */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        background-position: 68% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(4, 5, 9, 0.76) 0%,
+                rgba(4, 5, 9, 0.57) 48%,
+                rgba(4, 5, 9, 0.18) 100%
+            );
+    }
+
+    .hero-content {
+        padding-top: 90px;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .hero-title {
+        max-width: 100%;
+
+        margin-bottom: 24px;
+
+        font-size: clamp(39px, 11vw, 55px);
+
+        line-height: 1.08;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-description {
+        max-width: 450px;
+
+        margin-bottom: 28px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+    .hero-button {
+        min-height: 48px;
+
+        padding: 14px 20px;
+    }
+
+    .hero-features {
+        display: none;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .logo-symbol {
+        font-size: 32px;
+    }
+
+    .logo-text {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .hero {
+        background-position: 72% center;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+    }
+
+    .hero-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-eyebrow span {
+        margin: 0 4px;
+    }
+
+    .hero-title {
+        font-size:
+            clamp(36px, 11.5vw, 46px);
+    }
+
+    .hero-description {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+    .hero-description br {
+        display: none;
+    }
+
+    .hero-button {
+        min-height: 46px;
+
+        padding: 13px 18px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ==================================================
+   SHORT LAPTOP SCREENS
+================================================== */
+
+@media (min-width: 768px) and (max-height: 750px) {
+
+    .header {
+        padding: 18px 0;
+    }
+
+    .hero-content {
+        padding-top: 70px;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 18px;
+    }
+
+    .hero-title {
+        margin-bottom: 20px;
+
+        font-size:
+            clamp(46px, 4.7vw, 64px);
+    }
+
+    .hero-description {
+        margin-bottom: 22px;
+
+        line-height: 1.55;
+    }
+
+    .hero-button {
+        min-height: 46px;
+
+        padding: 13px 21px;
+    }
+
+    .hero-features {
+        bottom: 20px;
+    }
+}
+/* ==================================================
+   HOW IT WORKS
+================================================== */
+
+.how-it-works {
+    position: relative;
+
+    padding:
+        clamp(90px, 10vw, 150px)
+        0;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(51, 61, 120, 0.12),
+            transparent 35%
+        ),
+        #07080c;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+    max-width: 720px;
+
+    margin-bottom:
+        clamp(55px, 7vw, 90px);
+}
+
+
+.section-label {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #b99b67;
+}
+
+
+.section-title {
+    margin-bottom: 24px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(38px, 4.5vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 1.12;
+
+    letter-spacing: 2px;
+
+    color: #e4c48a;
+}
+
+
+.section-intro {
+    max-width: 620px;
+
+    font-size:
+        clamp(14px, 1vw, 16px);
+
+    line-height: 1.7;
+
+    color: #a89a82;
+}
+
+
+/* =========================
+   PROCESS GRID
+========================= */
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 16px;
+}
+
+
+/* =========================
+   PROCESS CARD
+========================= */
+
+.process-card {
+    position: relative;
+
+    min-height: 310px;
+
+    padding:
+        28px 24px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 24, 33, 0.94),
+            rgba(10, 11, 16, 0.96)
+        );
+
+    border:
+        1px solid
+        rgba(208, 174, 112, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.process-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(225, 193, 137, 0.65);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(29, 31, 42, 0.97),
+            rgba(11, 12, 18, 0.98)
+        );
+}
+
+
+/* =========================
+   CARD NUMBER
+========================= */
+
+.process-number {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #887354;
+}
+
+
+/* =========================
+   CARD ICON
+========================= */
+
+.process-icon {
+    height: 48px;
+
+    margin-bottom: 25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 35px;
+
+    line-height: 1;
+
+    color: #d7b878;
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.process-card h3 {
+    margin-bottom: 17px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    color: #dec28d;
+}
+
+
+.process-card p {
+    font-size: 12px;
+
+    line-height: 1.75;
+
+    color: #948b7e;
+}
+
+
+/* =========================
+   PROCESS FOOTER
+========================= */
+
+.process-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top:
+        clamp(45px, 6vw, 70px);
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid
+        rgba(207, 174, 113, 0.15);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #a88e63;
+
+    text-align: center;
+}
+
+
+.process-divider {
+    opacity: 0.45;
+}
+
+
+/* ==================================================
+   HOW IT WORKS - TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .process-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .process-card {
+        min-height: 270px;
+    }
+
+
+    .process-card:last-child {
+        grid-column:
+            span 2;
+    }
+
+}
+
+
+/* ==================================================
+   HOW IT WORKS - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .how-it-works {
+        padding:
+            80px 0;
+    }
+
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .section-title {
+        font-size:
+            clamp(34px, 10vw, 44px);
+    }
+
+
+    .section-intro {
+        font-size: 13px;
+    }
+
+
+    .process-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .process-card {
+        min-height: auto;
+
+        padding:
+            25px 22px 28px;
+    }
+
+
+    .process-card:last-child {
+        grid-column: auto;
+    }
+
+
+    .process-number {
+        margin-bottom: 25px;
+    }
+
+
+    .process-icon {
+        margin-bottom: 18px;
+    }
+
+
+    .process-footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        line-height: 1.6;
+    }
+
+
+    .process-divider {
+        display: none;
+    }
+
+}
+/* ==================================================
+   HOW IT WORKS - MOBILE POLISH
+================================================== */
+
+@media (max-width: 600px) {
+
+    .how-it-works {
+        padding: 70px 0 80px;
+    }
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .section-label {
+        margin-bottom: 16px;
+
+        font-size: 9px;
+
+        letter-spacing: 3.5px;
+    }
+
+    .section-title {
+        max-width: 360px;
+
+        margin-bottom: 20px;
+
+        font-size: clamp(31px, 8.5vw, 38px);
+
+        line-height: 1.12;
+
+        letter-spacing: 1px;
+    }
+
+    .section-intro {
+        max-width: 350px;
+
+        font-size: 12.5px;
+
+        line-height: 1.7;
+    }
+
+    .process-grid {
+        gap: 12px;
+    }
+
+    .process-card {
+        padding: 24px 24px 27px;
+    }
+
+    .process-number {
+        margin-bottom: 22px;
+    }
+
+    .process-icon {
+        height: 38px;
+
+        margin-bottom: 17px;
+
+        font-size: 30px;
+    }
+
+    .process-card h3 {
+        margin-bottom: 13px;
+
+        font-size: 18px;
+    }
+
+    .process-card p {
+        font-size: 11.5px;
+
+        line-height: 1.7;
+    }
+}
+/* ==================================================
+   OUR VISION
+================================================== */
+
+.vision {
+    position: relative;
+
+    padding:
+        clamp(100px, 11vw, 170px)
+        0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #090a10 0%,
+            #07080c 55%,
+            #090b13 100%
+        );
+
+    border-top:
+        1px solid
+        rgba(210, 176, 112, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.vision-glow {
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -200px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(46, 59, 126, 0.16) 0%,
+            rgba(30, 38, 83, 0.08) 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   VISION LAYOUT
+========================= */
+
+.vision-container {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap:
+        clamp(70px, 9vw, 150px);
+
+    align-items: start;
+}
+
+
+/* =========================
+   VISION TITLE
+========================= */
+
+.vision-title {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px, 5vw, 72px);
+
+    font-weight: 400;
+
+    line-height: 1.08;
+
+    letter-spacing: 1px;
+
+    color: #e5c68d;
+}
+
+
+/* =========================
+   VISION CONTENT
+========================= */
+
+.vision-content {
+    padding-top: 32px;
+}
+
+
+.vision-lead {
+    max-width: 560px;
+
+    margin-bottom: 25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(23px, 2vw, 30px);
+
+    line-height: 1.4;
+
+    color: #d9bc87;
+}
+
+
+.vision-text {
+    max-width: 580px;
+
+    margin-bottom: 55px;
+
+    font-size:
+        clamp(13px, 1vw, 15px);
+
+    line-height: 1.8;
+
+    color: #9e9485;
+}
+
+
+/* =========================
+   VISION PRINCIPLES
+========================= */
+
+.vision-principles {
+    border-top:
+        1px solid
+        rgba(215, 184, 123, 0.18);
+}
+
+
+.vision-item {
+    display: grid;
+
+    grid-template-columns:
+        55px 1fr;
+
+    gap: 20px;
+
+    padding:
+        27px 0;
+
+    border-bottom:
+        1px solid
+        rgba(215, 184, 123, 0.18);
+}
+
+
+.vision-number {
+    padding-top: 4px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #a48859;
+}
+
+
+.vision-item h3 {
+    margin-bottom: 8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    color: #dfc18a;
+}
+
+
+.vision-item p {
+    max-width: 430px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #8f877b;
+}
+
+
+/* ==================================================
+   OUR VISION - TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .vision-container {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .vision-title {
+        max-width: 650px;
+    }
+
+
+    .vision-content {
+        max-width: 650px;
+
+        padding-top: 0;
+    }
+
+}
+
+
+/* ==================================================
+   OUR VISION - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .vision {
+        padding:
+            75px 0 85px;
+    }
+
+
+    .vision-glow {
+        width: 420px;
+        height: 420px;
+
+        right: -240px;
+
+        top: 40%;
+    }
+
+
+    .vision-container {
+        gap: 42px;
+    }
+
+
+    .vision-title {
+        font-size:
+            clamp(35px, 9.5vw, 43px);
+
+        line-height: 1.1;
+    }
+
+
+    .vision-lead {
+        margin-bottom: 20px;
+
+        font-size: 21px;
+
+        line-height: 1.45;
+    }
+
+
+    .vision-text {
+        margin-bottom: 40px;
+
+        font-size: 12.5px;
+
+        line-height: 1.75;
+    }
+
+
+    .vision-item {
+        grid-template-columns:
+            38px 1fr;
+
+        gap: 12px;
+
+        padding:
+            23px 0;
+    }
+
+
+    .vision-item h3 {
+        font-size: 17px;
+    }
+
+
+    .vision-item p {
+        font-size: 11.5px;
+    }
+
+}
+@media (max-width: 600px) {
+
+    .vision-container {
+        gap: 30px;
+    }
+
+}
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    position: relative;
+
+    padding: 80px 0 30px;
+
+    background: #050609;
+
+    border-top:
+        1px solid
+        rgba(215, 184, 123, 0.16);
+}
+
+
+/* =========================
+   FOOTER LAYOUT
+========================= */
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 0.7fr 1fr;
+
+    gap:
+        clamp(50px, 8vw, 120px);
+
+    padding-bottom: 65px;
+}
+
+
+/* =========================
+   FOOTER BRAND
+========================= */
+
+.footer-logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+    color: #e4c48a;
+}
+
+
+.footer-logo-symbol {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 42px;
+
+    line-height: 1;
+}
+
+
+.footer-logo-text {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+}
+
+
+.footer-tagline {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    color: #8f7b5a;
+}
+
+
+.footer-tagline span {
+    margin: 0 6px;
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   FOOTER HEADINGS
+========================= */
+
+.footer-heading {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #9f865d;
+}
+
+
+/* =========================
+   FOOTER NAVIGATION
+========================= */
+
+.footer-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-nav a {
+    margin-bottom: 14px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    color: #a99a80;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.footer-nav a:hover {
+    color: #e5c68d;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   FOOTER STATEMENT
+========================= */
+
+.footer-description {
+    max-width: 280px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.55;
+
+    color: #bba57d;
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        rgba(215, 184, 123, 0.12);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #625b51;
+}
+
+
+/* ==================================================
+   FOOTER - TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .footer-content {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 50px;
+    }
+
+
+    .footer-brand {
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+
+/* ==================================================
+   FOOTER - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding:
+            60px 0 25px;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+
+        padding-bottom: 45px;
+    }
+
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+
+    .footer-logo-symbol {
+        font-size: 36px;
+    }
+
+
+    .footer-logo-text {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .footer-description {
+        max-width: 250px;
+
+        font-size: 17px;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        line-height: 1.6;
+    }
+
+}
+/* ==================================================
+   HOW IT WORKS - ORIGINAL ROYA DESIGN
+================================================== */
+
+.how-it-works {
+    position: relative;
+    padding: clamp(90px, 9vw, 140px) 0 40px;
+    background:
+        radial-gradient(
+            circle at 12% 55%,
+            rgba(48, 55, 105, 0.14),
+            transparent 30%
+        ),
+        #07080c;
+    border-top: 1px solid rgba(215, 184, 123, 0.12);
+    overflow: hidden;
+}
+
+
+/* MAIN LAYOUT */
+
+.how-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.25fr;
+    border: 1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+/* ==================================================
+   LEFT SIDE
+================================================== */
+
+.how-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(50px, 6vw, 90px);
+    border-right: 1px solid rgba(215, 184, 123, 0.18);
+}
+
+
+.how-title {
+    margin-bottom: 32px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(34px, 3.3vw, 52px);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 2px;
+
+    color: #d7b879;
+}
+
+
+.how-title span {
+    color: #e7c789;
+}
+
+
+.how-description {
+    max-width: 380px;
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: #aa9b83;
+}
+
+
+.how-description-secondary {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   RIGHT SIDE - CARDS
+================================================== */
+
+.how-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+
+    padding: 32px;
+}
+
+
+.how-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 32px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 26, 31, 0.98),
+            rgba(15, 16, 20, 0.98)
+        );
+
+    border: 1px solid rgba(215, 184, 123, 0.08);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.how-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(215, 184, 123, 0.28);
+}
+
+
+.how-number {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #b89a67;
+}
+
+
+.how-card h3 {
+    margin-bottom: 22px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.35;
+
+    color: #ddbd82;
+}
+
+
+.how-card p {
+    max-width: 240px;
+
+    font-size: 12px;
+    line-height: 1.75;
+
+    color: #9c9180;
+}
+
+
+.how-card-line {
+    position: absolute;
+
+    left: 30px;
+    bottom: 25px;
+
+    width: 65%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b9965e,
+            rgba(185, 150, 94, 0.15)
+        );
+}
+
+
+/* ==================================================
+   DISCLAIMER
+================================================== */
+
+.how-disclaimer {
+    padding-top: 28px;
+
+    text-align: center;
+}
+
+
+.how-disclaimer p {
+    font-size: 9px;
+    letter-spacing: 0.4px;
+
+    color: #766c5d;
+}
+
+
+.how-disclaimer span {
+    margin: 0 10px;
+
+    color: #a4895c;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 950px) {
+
+    .how-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .how-intro {
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(215, 184, 123, 0.18);
+    }
+
+
+    .how-description {
+        max-width: 600px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .how-it-works {
+        padding: 70px 0 35px;
+    }
+
+
+    .how-layout {
+        border-color:
+            rgba(215, 184, 123, 0.18);
+    }
+
+
+    .how-intro {
+        padding: 40px 26px;
+    }
+
+
+    .how-title {
+        margin-bottom: 26px;
+
+        font-size:
+            clamp(30px, 8.5vw, 38px);
+
+        line-height: 1.2;
+
+        letter-spacing: 1px;
+    }
+
+
+    .how-description {
+        font-size: 12.5px;
+
+        line-height: 1.7;
+    }
+
+
+    .how-steps {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        padding: 18px;
+    }
+
+
+    .how-card {
+        min-height: 250px;
+
+        padding: 27px 25px;
+    }
+
+
+    .how-card h3 {
+        font-size: 19px;
+    }
+
+
+    .how-card p {
+        font-size: 11.5px;
+
+        max-width: 280px;
+    }
+
+
+    .how-card-line {
+        left: 25px;
+
+        bottom: 22px;
+    }
+
+
+    .how-disclaimer {
+        padding-top: 22px;
+    }
+
+
+    .how-disclaimer p {
+        padding: 0 18px;
+
+        font-size: 8px;
+
+        line-height: 1.7;
+    }
+
+}
+/* ==================================================
+   FROM PROPERTY TO YOUR PORTFOLIO
+================================================== */
+
+.portfolio-flow {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(80px, 8vw, 120px) 0 30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(48, 60, 125, 0.24),
+            transparent 35%
+        ),
+        #07080c;
+
+    border-top: 1px solid rgba(215, 184, 123, 0.12);
+}
+
+
+/* Decorative glow */
+
+.portfolio-glow {
+    position: absolute;
+
+    left: -10%;
+    right: -10%;
+    bottom: -160px;
+
+    height: 300px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(69, 82, 175, 0.18),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.portfolio-heading {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 35px;
+}
+
+
+.portfolio-heading h2 {
+    margin-bottom: 10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(32px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 1.5px;
+
+    color: #d8ba80;
+}
+
+
+.portfolio-heading p {
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #a99a83;
+}
+
+
+/* ==================================================
+   THREE COLUMNS
+================================================== */
+
+.portfolio-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.portfolio-step {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 0 34px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.28);
+}
+
+
+.portfolio-step:first-child {
+    padding-left: 0;
+}
+
+
+.portfolio-step:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+
+/* Step heading */
+
+.portfolio-step-heading {
+    display: flex;
+    align-items: baseline;
+
+    gap: 15px;
+
+    margin-bottom: 14px;
+}
+
+
+.portfolio-step-heading span {
+    flex-shrink: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    color: #d3b273;
+}
+
+
+.portfolio-step-heading h3 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    color: #d7b879;
+}
+
+
+.portfolio-step > p {
+    min-height: 78px;
+
+    margin-bottom: 20px;
+
+    font-size: 11.5px;
+    line-height: 1.65;
+
+    color: #a09687;
+}
+
+
+/* ==================================================
+   PHONE IMAGES
+================================================== */
+
+.portfolio-phone {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    flex: 1;
+
+    min-height: 420px;
+}
+
+
+.portfolio-phone img {
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+    height: 420px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 20px 25px rgba(0, 0, 0, 0.35)
+        );
+}
+
+
+/* ==================================================
+   BOTTOM NOTE
+================================================== */
+
+.portfolio-note {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 18px;
+
+    font-size: 8px;
+    letter-spacing: 0.3px;
+
+    color: #766b5c;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 950px) {
+
+    .portfolio-grid {
+        gap: 40px;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .portfolio-step,
+    .portfolio-step:first-child,
+    .portfolio-step:last-child {
+        padding: 0 0 40px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(215, 184, 123, 0.18);
+    }
+
+
+    .portfolio-step:last-child {
+        border-bottom: none;
+    }
+
+
+    .portfolio-step > p {
+        min-height: auto;
+
+        max-width: 550px;
+    }
+
+
+    .portfolio-phone {
+        min-height: auto;
+
+        justify-content: flex-start;
+    }
+
+
+    .portfolio-phone img {
+        height: 500px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .portfolio-flow {
+        padding: 70px 0 25px;
+    }
+
+
+    .portfolio-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .portfolio-heading h2 {
+        max-width: 360px;
+
+        font-size:
+            clamp(31px, 8.5vw, 38px);
+
+        line-height: 1.15;
+    }
+
+
+    .portfolio-heading p {
+        max-width: 330px;
+
+        font-size: 12px;
+    }
+
+
+    .portfolio-grid {
+        gap: 45px;
+    }
+
+
+    .portfolio-step-heading {
+        gap: 12px;
+    }
+
+
+    .portfolio-step-heading span {
+        font-size: 17px;
+    }
+
+
+    .portfolio-step-heading h3 {
+        font-size: 19px;
+    }
+
+
+    .portfolio-step > p {
+        max-width: 340px;
+
+        margin-bottom: 22px;
+
+        font-size: 11.5px;
+    }
+
+
+    .portfolio-phone {
+        justify-content: center;
+    }
+
+
+    .portfolio-phone img {
+        width: auto;
+        max-width: 85%;
+        height: auto;
+        max-height: 520px;
+    }
+
+
+    .portfolio-note {
+        margin-top: 5px;
+
+        font-size: 7.5px;
+    }
+
+}
+/* ==================================================
+   HAVE A VOICE AND PLAN YOUR EXIT
+================================================== */
+
+.voice-exit {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(80px, 8vw, 120px) 0 30px;
+
+    background:
+        radial-gradient(
+            circle at 25% 100%,
+            rgba(55, 65, 145, 0.22),
+            transparent 32%
+        ),
+        #07080c;
+
+    border-top: 1px solid rgba(215, 184, 123, 0.12);
+}
+
+
+/* Decorative glow */
+
+.voice-exit-glow {
+    position: absolute;
+
+    left: -10%;
+    bottom: -160px;
+
+    width: 70%;
+    height: 320px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(67, 79, 170, 0.2),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.voice-exit-heading {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 50px;
+}
+
+
+.voice-exit-label {
+    margin-bottom: 14px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #a58a5e;
+}
+
+
+.voice-exit-label span {
+    margin: 0 8px;
+
+    color: #665a48;
+}
+
+
+.voice-exit-heading h2 {
+    margin-bottom: 10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(34px, 4.3vw, 58px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+
+    color: #d8ba80;
+}
+
+
+.voice-exit-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #a99a83;
+}
+
+
+/* ==================================================
+   TWO MAIN BLOCKS
+================================================== */
+
+.voice-exit-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+}
+
+
+.exit-block {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+
+    align-items: end;
+
+    min-width: 0;
+    padding: 0 45px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.28);
+}
+
+
+.exit-block:first-child {
+    padding-left: 0;
+}
+
+
+.exit-block:last-child {
+    padding-right: 0;
+
+    border-right: none;
+}
+
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.exit-copy {
+    align-self: start;
+
+    padding-top: 25px;
+}
+
+
+.exit-title {
+    display: flex;
+    align-items: baseline;
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.exit-title span {
+    flex-shrink: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    color: #d3b273;
+}
+
+
+.exit-title h3 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    color: #d8ba80;
+}
+
+
+.exit-copy h4 {
+    margin-top: 35px;
+    margin-bottom: 14px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    color: #cbaa72;
+}
+
+
+.exit-copy > p {
+    max-width: 260px;
+
+    margin-bottom: 15px;
+
+    font-size: 11.5px;
+    line-height: 1.75;
+
+    color: #9f9586;
+}
+
+
+.exit-small-line {
+    display: block;
+
+    width: 50px;
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: #a98854;
+}
+
+
+.exit-copy .exit-note {
+    max-width: 180px;
+
+    color: #857b6d;
+}
+
+
+/* ==================================================
+   PHONES
+================================================== */
+
+.exit-phone {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    min-width: 0;
+}
+
+
+.exit-phone img {
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+    height: 510px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 20px 25px rgba(0, 0, 0, 0.4)
+        );
+}
+
+
+/* ==================================================
+   DISCLAIMER
+================================================== */
+
+.voice-exit-disclaimer {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 18px;
+
+    font-size: 8px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+
+    color: #766b5c;
+}
+
+
+.voice-exit-disclaimer span {
+    margin: 0 8px;
+
+    color: #a68a5c;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .voice-exit-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .exit-block,
+    .exit-block:first-child,
+    .exit-block:last-child {
+        padding: 45px 0;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.18);
+    }
+
+
+    .exit-block:last-child {
+        border-bottom: none;
+    }
+
+
+    .exit-phone img {
+        height: 520px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .voice-exit {
+        padding: 70px 0 25px;
+    }
+
+
+    .voice-exit-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .voice-exit-label {
+        font-size: 8px;
+    }
+
+
+    .voice-exit-heading h2 {
+        max-width: 370px;
+
+        font-size:
+            clamp(31px, 8.5vw, 38px);
+
+        line-height: 1.15;
+    }
+
+
+    .voice-exit-subtitle {
+        max-width: 340px;
+
+        font-size: 12px;
+    }
+
+
+    .exit-block,
+    .exit-block:first-child,
+    .exit-block:last-child {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 20px 0 45px;
+    }
+
+
+    .exit-copy {
+        padding-top: 0;
+    }
+
+
+    .exit-title {
+        margin-bottom: 24px;
+    }
+
+
+    .exit-title span {
+        font-size: 17px;
+    }
+
+
+    .exit-title h3 {
+        font-size: 19px;
+    }
+
+
+    .exit-copy h4 {
+        margin-top: 27px;
+
+        font-size: 15px;
+    }
+
+
+    .exit-copy > p {
+        max-width: 340px;
+
+        font-size: 11.5px;
+    }
+
+
+    .exit-phone img {
+        width: auto;
+        max-width: 82%;
+        height: auto;
+        max-height: 550px;
+    }
+
+
+    .voice-exit-disclaimer {
+        margin-top: 5px;
+
+        font-size: 7.5px;
+    }
+
+}
+/* ==================================================
+   OUR VISION - ORIGINAL ROYA DESIGN
+================================================== */
+
+.vision-original {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(90px, 9vw, 140px) 0 35px;
+
+    background:
+        radial-gradient(
+            circle at 10% 55%,
+            rgba(48, 58, 120, 0.15),
+            transparent 28%
+        ),
+        #07080c;
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.12);
+}
+
+
+/* BACKGROUND GLOW */
+
+.vision-original-glow {
+    position: absolute;
+
+    left: -170px;
+    top: 35%;
+
+    width: 500px;
+    height: 500px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(62, 72, 150, 0.13),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   MAIN LAYOUT
+================================================== */
+
+.vision-original-layout {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.25fr;
+
+    border:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+/* ==================================================
+   LEFT SIDE
+================================================== */
+
+.vision-original-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: clamp(50px, 6vw, 85px);
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.18);
+}
+
+
+.vision-original-label {
+    margin-bottom: 35px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: #b29462;
+}
+
+
+.vision-original-title {
+    margin-bottom: 35px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(34px, 3.3vw, 50px);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 2px;
+
+    color: #d9ba7d;
+}
+
+
+.vision-original-text {
+    max-width: 390px;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: #a99b87;
+}
+
+
+.vision-original-text:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   RIGHT CARDS
+================================================== */
+
+.vision-original-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    padding: 32px;
+}
+
+
+.vision-original-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 32px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 26, 31, 0.98),
+            rgba(15, 16, 20, 0.98)
+        );
+
+    border:
+        1px solid rgba(215, 184, 123, 0.08);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.vision-original-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(215, 184, 123, 0.28);
+}
+
+
+.vision-original-number {
+    display: block;
+
+    margin-bottom: 23px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #b89a67;
+}
+
+
+.vision-original-card h3 {
+    margin-bottom: 22px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+
+    color: #ddbd82;
+}
+
+
+.vision-original-card p {
+    max-width: 250px;
+
+    font-size: 12px;
+    line-height: 1.75;
+
+    color: #9c9180;
+}
+
+
+.vision-original-line {
+    position: absolute;
+
+    left: 30px;
+    bottom: 25px;
+
+    width: 65%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b9965e,
+            rgba(185, 150, 94, 0.15)
+        );
+}
+
+
+/* ==================================================
+   BOTTOM TEXT
+================================================== */
+
+.vision-original-footer {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    padding-top: 28px;
+
+    font-size: 9px;
+    letter-spacing: 0.4px;
+
+    color: #8c806e;
+}
+
+
+.vision-footer-divider {
+    color: #a88c5d;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 950px) {
+
+    .vision-original-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .vision-original-intro {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.18);
+    }
+
+
+    .vision-original-text {
+        max-width: 600px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .vision-original {
+        padding: 70px 0 30px;
+    }
+
+
+    .vision-original-intro {
+        padding: 40px 26px;
+    }
+
+
+    .vision-original-label {
+        margin-bottom: 25px;
+
+        font-size: 8px;
+    }
+
+
+    .vision-original-title {
+        margin-bottom: 28px;
+
+        font-size:
+            clamp(30px, 8.5vw, 38px);
+
+        line-height: 1.2;
+
+        letter-spacing: 1px;
+    }
+
+
+    .vision-original-text {
+        font-size: 12.5px;
+
+        line-height: 1.7;
+    }
+
+
+    .vision-original-cards {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        padding: 18px;
+    }
+
+
+    .vision-original-card {
+        min-height: 250px;
+
+        padding: 27px 25px;
+    }
+
+
+    .vision-original-card h3 {
+        font-size: 19px;
+    }
+
+
+    .vision-original-card p {
+        max-width: 300px;
+
+        font-size: 11.5px;
+    }
+
+
+    .vision-original-line {
+        left: 25px;
+        bottom: 22px;
+    }
+
+
+    .vision-original-footer {
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        padding: 22px 15px 0;
+
+        font-size: 8px;
+    }
+
+}
+/* ==================================================
+   WHY ROYA
+================================================== */
+
+.why-roya {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(90px, 9vw, 135px) 0 45px;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(54, 65, 145, 0.18),
+            transparent 34%
+        ),
+        #07080c;
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.12);
+}
+
+
+/* BACKGROUND GLOW */
+
+.why-roya-glow {
+    position: absolute;
+
+    left: 50%;
+    bottom: -200px;
+
+    width: 900px;
+    height: 400px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(66, 77, 170, 0.16),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.why-roya-heading {
+    position: relative;
+    z-index: 2;
+
+    max-width: 720px;
+
+    margin-bottom: 65px;
+}
+
+
+.why-roya-label {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+    color: #b39461;
+}
+
+
+.why-roya-heading h2 {
+    margin-bottom: 28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: 2px;
+
+    color: #d9ba7d;
+}
+
+
+.why-roya-intro {
+    max-width: 480px;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: #a99b87;
+}
+
+
+/* ==================================================
+   CARDS
+================================================== */
+
+.why-roya-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.22);
+
+    border-bottom:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+.why-roya-card {
+    position: relative;
+
+    min-height: 350px;
+
+    padding: 42px 38px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+.why-roya-card:last-child {
+    border-right: none;
+}
+
+
+.why-roya-number {
+    display: block;
+
+    margin-bottom: 38px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #b89a67;
+}
+
+
+.why-roya-card h3 {
+    margin-bottom: 28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(22px, 2vw, 29px);
+    font-weight: 400;
+    line-height: 1.25;
+
+    color: #d8b979;
+}
+
+
+.why-roya-card p {
+    max-width: 290px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #9e9383;
+}
+
+
+.why-roya-line {
+    position: absolute;
+
+    left: 38px;
+    bottom: 38px;
+
+    width: 70px;
+    height: 1px;
+
+    background: #aa8a56;
+}
+
+
+/* ==================================================
+   BOTTOM STATEMENT
+================================================== */
+
+.why-roya-statement {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 35px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    color: #a98c5e;
+}
+
+
+.why-roya-divider {
+    color: #5f5547;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .why-roya-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .why-roya-card {
+        min-height: 280px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.18);
+    }
+
+
+    .why-roya-card:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .why-roya {
+        padding: 70px 0 35px;
+    }
+
+
+    .why-roya-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .why-roya-label {
+        margin-bottom: 18px;
+
+        font-size: 8px;
+    }
+
+
+    .why-roya-heading h2 {
+        margin-bottom: 24px;
+
+        font-size:
+            clamp(34px, 10vw, 44px);
+
+        line-height: 1.07;
+
+        letter-spacing: 1px;
+    }
+
+
+    .why-roya-intro {
+        max-width: 340px;
+
+        font-size: 12.5px;
+    }
+
+
+    .why-roya-card {
+        min-height: 260px;
+
+        padding: 30px 26px;
+    }
+
+
+    .why-roya-number {
+        margin-bottom: 25px;
+    }
+
+
+    .why-roya-card h3 {
+        margin-bottom: 20px;
+
+        font-size: 22px;
+    }
+
+
+    .why-roya-card p {
+        max-width: 310px;
+
+        font-size: 11.5px;
+    }
+
+
+    .why-roya-line {
+        left: 26px;
+        bottom: 27px;
+    }
+
+
+    .why-roya-statement {
+        flex-wrap: wrap;
+
+        gap: 9px;
+
+        padding-top: 27px;
+
+        font-size: 8px;
+        letter-spacing: 1.3px;
+    }
+
+}
+/* ==================================================
+   REAL ESTATE TOKENIZATION
+================================================== */
+
+.tokenization {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(90px, 9vw, 135px) 0 40px;
+
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(55, 67, 150, 0.16),
+            transparent 30%
+        ),
+        #07080c;
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.12);
+}
+
+
+/* BACKGROUND GLOW */
+
+.tokenization-glow {
+    position: absolute;
+
+    right: -200px;
+    top: 20%;
+
+    width: 650px;
+    height: 650px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(64, 76, 165, 0.14),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.tokenization-heading {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin-bottom: 65px;
+}
+
+
+.tokenization-label {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+    color: #b39461;
+}
+
+
+.tokenization-heading h2 {
+    margin-bottom: 28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 2px;
+
+    color: #d9ba7d;
+}
+
+
+.tokenization-intro {
+    max-width: 520px;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: #a99b87;
+}
+
+
+/* ==================================================
+   THREE MAIN CARDS
+================================================== */
+
+.tokenization-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.22);
+
+    border-bottom:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+.tokenization-card {
+    min-height: 390px;
+
+    padding: 38px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+.tokenization-card:last-child {
+    border-right: none;
+}
+
+
+.tokenization-number {
+    display: block;
+
+    margin-bottom: 35px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #b89a67;
+}
+
+
+.tokenization-icon {
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+
+    margin-bottom: 25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 40px;
+
+    color: #c9a969;
+}
+
+
+.tokenization-card h3 {
+    margin-bottom: 25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(22px, 2vw, 28px);
+    font-weight: 400;
+    line-height: 1.25;
+
+    color: #d8b979;
+}
+
+
+.tokenization-card p {
+    max-width: 300px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #9e9383;
+}
+
+
+/* ==================================================
+   BOTTOM BENEFITS
+================================================== */
+
+.tokenization-benefits {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 55px;
+}
+
+
+.tokenization-benefit {
+    display: flex;
+
+    gap: 18px;
+
+    padding: 0 35px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.18);
+}
+
+
+.tokenization-benefit:first-child {
+    padding-left: 0;
+}
+
+
+.tokenization-benefit:last-child {
+    padding-right: 0;
+
+    border-right: none;
+}
+
+
+.tokenization-benefit > span {
+    flex-shrink: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    color: #a98b59;
+}
+
+
+.tokenization-benefit h4 {
+    margin-bottom: 10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    color: #d2b276;
+}
+
+
+.tokenization-benefit p {
+    max-width: 220px;
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    color: #8f8577;
+}
+
+
+/* DISCLAIMER */
+
+.tokenization-note {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 50px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.1);
+
+    font-size: 8px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+
+    color: #71685c;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .tokenization-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tokenization-card {
+        min-height: 300px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.18);
+    }
+
+
+    .tokenization-card:last-child {
+        border-bottom: none;
+    }
+
+
+    .tokenization-benefits {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .tokenization-benefit,
+    .tokenization-benefit:first-child,
+    .tokenization-benefit:last-child {
+        padding: 0 0 30px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.12);
+    }
+
+
+    .tokenization-benefit:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .tokenization {
+        padding: 70px 0 30px;
+    }
+
+
+    .tokenization-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .tokenization-label {
+        margin-bottom: 18px;
+
+        font-size: 8px;
+    }
+
+
+    .tokenization-heading h2 {
+        margin-bottom: 24px;
+
+        font-size:
+            clamp(34px, 10vw, 44px);
+
+        line-height: 1.08;
+
+        letter-spacing: 1px;
+    }
+
+
+    .tokenization-intro {
+        max-width: 340px;
+
+        font-size: 12.5px;
+    }
+
+
+    .tokenization-card {
+        min-height: 300px;
+
+        padding: 30px 26px;
+    }
+
+
+    .tokenization-number {
+        margin-bottom: 24px;
+    }
+
+
+    .tokenization-icon {
+        height: 40px;
+
+        margin-bottom: 20px;
+
+        font-size: 32px;
+    }
+
+
+    .tokenization-card h3 {
+        margin-bottom: 18px;
+
+        font-size: 22px;
+    }
+
+
+    .tokenization-card p {
+        max-width: 310px;
+
+        font-size: 11.5px;
+    }
+
+
+    .tokenization-benefits {
+        margin-top: 40px;
+
+        gap: 24px;
+    }
+
+
+    .tokenization-benefit {
+        gap: 14px;
+    }
+
+
+    .tokenization-benefit h4 {
+        font-size: 15px;
+    }
+
+
+    .tokenization-note {
+        margin-top: 25px;
+
+        font-size: 7.5px;
+    }
+
+}
+/* ==================================================
+   ROYA ECOSYSTEM
+================================================== */
+
+.ecosystem {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(90px, 9vw, 135px) 0 40px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(55, 67, 145, 0.12),
+            transparent 32%
+        ),
+        #07080c;
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.12);
+}
+
+
+.ecosystem-glow {
+    position: absolute;
+
+    left: 50%;
+    top: 30%;
+
+    width: 800px;
+    height: 500px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(64, 76, 165, 0.12),
+            transparent 67%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.ecosystem-heading {
+    position: relative;
+    z-index: 2;
+
+    max-width: 820px;
+
+    margin-bottom: 70px;
+}
+
+
+.ecosystem-label {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+    color: #b39461;
+}
+
+
+.ecosystem-heading h2 {
+    margin-bottom: 28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 2px;
+
+    color: #d9ba7d;
+}
+
+
+.ecosystem-intro {
+    max-width: 520px;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: #a99b87;
+}
+
+
+/* ==================================================
+   ROYA GROUP
+================================================== */
+
+.ecosystem-system {
+    position: relative;
+    z-index: 2;
+}
+
+
+.ecosystem-group {
+    width: min(480px, 100%);
+
+    margin: 0 auto;
+
+    padding: 35px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 26, 31, 0.98),
+            rgba(13, 14, 18, 0.98)
+        );
+
+    border:
+        1px solid rgba(215, 184, 123, 0.28);
+}
+
+
+.ecosystem-group-small {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #9c8258;
+}
+
+
+.ecosystem-group h3 {
+    margin-bottom: 13px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    color: #d9ba7d;
+}
+
+
+.ecosystem-group p {
+    font-size: 11px;
+    line-height: 1.7;
+
+    color: #968b7c;
+}
+
+
+/* ==================================================
+   CONNECTOR
+================================================== */
+
+.ecosystem-connector {
+    position: relative;
+
+    width: 66%;
+
+    height: 75px;
+
+    margin: 0 auto;
+}
+
+
+.ecosystem-connector::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 1px;
+    height: 38px;
+
+    background:
+        rgba(215, 184, 123, 0.3);
+}
+
+
+.ecosystem-connector::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 38px;
+
+    height: 1px;
+
+    background:
+        rgba(215, 184, 123, 0.3);
+}
+
+
+.ecosystem-connector span::before,
+.ecosystem-connector span::after {
+    content: "";
+
+    position: absolute;
+
+    top: 38px;
+
+    width: 1px;
+    height: 37px;
+
+    background:
+        rgba(215, 184, 123, 0.3);
+}
+
+
+.ecosystem-connector span::before {
+    left: 0;
+}
+
+
+.ecosystem-connector span::after {
+    right: 0;
+}
+
+
+/* ==================================================
+   THREE DIVISIONS
+================================================== */
+
+.ecosystem-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.2);
+
+    border-bottom:
+        1px solid rgba(215, 184, 123, 0.2);
+}
+
+
+.ecosystem-card {
+    position: relative;
+
+    min-height: 380px;
+
+    padding: 38px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.2);
+}
+
+
+.ecosystem-card:last-child {
+    border-right: none;
+}
+
+
+.ecosystem-number {
+    display: block;
+
+    margin-bottom: 30px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #b89a67;
+}
+
+
+.ecosystem-icon {
+    height: 45px;
+
+    margin-bottom: 23px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 35px;
+
+    color: #c8a667;
+}
+
+
+.ecosystem-card h3 {
+    margin-bottom: 24px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(21px, 2vw, 27px);
+    font-weight: 400;
+    line-height: 1.25;
+
+    color: #d8b979;
+}
+
+
+.ecosystem-card p {
+    max-width: 285px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #9b9081;
+}
+
+
+.ecosystem-card-line {
+    position: absolute;
+
+    left: 38px;
+    bottom: 35px;
+
+    width: 70px;
+    height: 1px;
+
+    background: #a88957;
+}
+
+
+/* ==================================================
+   FLOW
+================================================== */
+
+.ecosystem-flow {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 35px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+    letter-spacing: 1.8px;
+
+    color: #a88b5c;
+}
+
+
+.ecosystem-arrow {
+    color: #5f5547;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .ecosystem-connector {
+        display: none;
+    }
+
+
+    .ecosystem-group {
+        margin-bottom: 25px;
+    }
+
+
+    .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ecosystem-card {
+        min-height: 290px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.18);
+    }
+
+
+    .ecosystem-card:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .ecosystem {
+        padding: 70px 0 30px;
+    }
+
+
+    .ecosystem-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .ecosystem-label {
+        margin-bottom: 18px;
+
+        font-size: 8px;
+    }
+
+
+    .ecosystem-heading h2 {
+        margin-bottom: 24px;
+
+        font-size:
+            clamp(34px, 10vw, 44px);
+
+        line-height: 1.08;
+
+        letter-spacing: 1px;
+    }
+
+
+    .ecosystem-intro {
+        max-width: 340px;
+
+        font-size: 12.5px;
+    }
+
+
+    .ecosystem-group {
+        padding: 28px 25px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .ecosystem-group h3 {
+        font-size: 25px;
+    }
+
+
+    .ecosystem-card {
+        min-height: 285px;
+
+        padding: 30px 26px;
+    }
+
+
+    .ecosystem-number {
+        margin-bottom: 23px;
+    }
+
+
+    .ecosystem-icon {
+        height: 38px;
+
+        margin-bottom: 18px;
+
+        font-size: 30px;
+    }
+
+
+    .ecosystem-card h3 {
+        margin-bottom: 18px;
+
+        font-size: 21px;
+    }
+
+
+    .ecosystem-card p {
+        max-width: 310px;
+
+        font-size: 11.5px;
+    }
+
+
+    .ecosystem-card-line {
+        left: 26px;
+        bottom: 27px;
+    }
+
+
+    .ecosystem-flow {
+        flex-wrap: wrap;
+
+        gap: 8px 12px;
+
+        padding-top: 27px;
+
+        font-size: 8px;
+        letter-spacing: 1.2px;
+    }
+
+}
+/* ==================================================
+   MARKET OPPORTUNITY
+================================================== */
+
+.market {
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(90px, 9vw, 135px) 0 40px;
+
+    background:
+        radial-gradient(
+            circle at 50% 75%,
+            rgba(54, 65, 145, 0.16),
+            transparent 34%
+        ),
+        #07080c;
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.12);
+}
+
+
+.market-glow {
+    position: absolute;
+
+    left: 50%;
+    bottom: -220px;
+
+    width: 900px;
+    height: 500px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(64, 76, 165, 0.15),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.market-heading {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin-bottom: 70px;
+}
+
+
+.market-label {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+    color: #b39461;
+}
+
+
+.market-heading h2 {
+    margin-bottom: 28px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 2px;
+
+    color: #d9ba7d;
+}
+
+
+.market-intro {
+    max-width: 520px;
+
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: #a99b87;
+}
+
+
+/* ==================================================
+   MARKET CARDS
+================================================== */
+
+.market-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.22);
+
+    border-bottom:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+.market-card {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 40px 38px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+
+.market-card:last-child {
+    border-right: none;
+}
+
+
+.market-number {
+    display: block;
+
+    margin-bottom: 50px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #b89a67;
+}
+
+
+.market-category {
+    margin-bottom: 13px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #817464;
+}
+
+
+.market-card h3 {
+    margin-bottom: 50px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(23px, 2vw, 29px);
+    font-weight: 400;
+    line-height: 1.25;
+
+    color: #d8b979;
+}
+
+
+/* NUMBERS */
+
+.market-value {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.market-from {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    color: #8e816f;
+}
+
+
+.market-arrow {
+    font-size: 18px;
+
+    color: #6d604f;
+}
+
+
+.market-to {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(27px, 2.5vw, 36px);
+
+    color: #d9ba7d;
+}
+
+
+.market-line {
+    position: absolute;
+
+    left: 38px;
+    right: 38px;
+    bottom: 38px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a98a57,
+            rgba(169, 138, 87, 0.05)
+        );
+}
+
+
+/* ==================================================
+   INTERSECTION
+================================================== */
+
+.market-intersection {
+    position: relative;
+    z-index: 2;
+
+    padding: 55px 0 35px;
+
+    text-align: center;
+}
+
+
+.market-intersection-label {
+    margin-bottom: 25px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #7f7465;
+}
+
+
+.market-intersection-items {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    color: #c3a56f;
+}
+
+
+.market-x {
+    color: #625749;
+}
+
+
+/* SOURCE */
+
+.market-source {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(215, 184, 123, 0.1);
+
+    font-size: 8px;
+    line-height: 1.6;
+
+    color: #6f665a;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .market-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .market-card {
+        min-height: 300px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.18);
+    }
+
+
+    .market-card:last-child {
+        border-bottom: none;
+    }
+
+
+    .market-intersection-items {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .market {
+        padding: 70px 0 30px;
+    }
+
+
+    .market-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .market-label {
+        margin-bottom: 18px;
+
+        font-size: 8px;
+    }
+
+
+    .market-heading h2 {
+        margin-bottom: 24px;
+
+        font-size:
+            clamp(34px, 10vw, 44px);
+
+        line-height: 1.08;
+
+        letter-spacing: 1px;
+    }
+
+
+    .market-intro {
+        max-width: 340px;
+
+        font-size: 12.5px;
+    }
+
+
+    .market-card {
+        min-height: 285px;
+
+        padding: 30px 26px;
+    }
+
+
+    .market-number {
+        margin-bottom: 32px;
+    }
+
+
+    .market-card h3 {
+        margin-bottom: 32px;
+
+        font-size: 22px;
+    }
+
+
+    .market-value {
+        gap: 10px;
+    }
+
+
+    .market-from {
+        font-size: 17px;
+    }
+
+
+    .market-to {
+        font-size: 28px;
+    }
+
+
+    .market-line {
+        left: 26px;
+        right: 26px;
+        bottom: 27px;
+    }
+
+
+    .market-intersection {
+        padding: 40px 0 25px;
+    }
+
+
+    .market-intersection-items {
+        flex-direction: column;
+
+        gap: 10px;
+
+        font-size: 11px;
+    }
+
+
+    .market-x {
+        font-size: 13px;
+    }
+
+
+    .market-source {
+        font-size: 7.5px;
+    }
+
+}
+/* ==================================================
+   MARKET — ORIGINAL DECK IMAGES
+================================================== */
+
+.market-image-grid {
+    align-items: stretch;
+}
+
+.market-image-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 32px 28px 36px;
+
+    border-right:
+        1px solid rgba(215, 184, 123, 0.22);
+}
+
+.market-image-card:last-child {
+    border-right: none;
+}
+
+.market-image-card .market-number {
+    margin-bottom: 24px;
+}
+
+.market-chart-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .market-image-card {
+        padding: 30px 24px 38px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(215, 184, 123, 0.18);
+    }
+
+    .market-image-card:last-child {
+        border-bottom: none;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .market-image-card {
+        padding: 26px 18px 32px;
+    }
+
+    .market-image-card .market-number {
+        margin-bottom: 18px;
+    }
+
+    .market-chart-image {
+        width: 100%;
+        max-width: 390px;
+
+        margin: 0 auto;
+    }
+
+}
+/* =========================
+   THE PROBLEM
+========================= */
+
+.problem {
+    position: relative;
+    padding: 120px 0;
+    background: #08090d;
+    overflow: hidden;
+}
+
+.problem-glow {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: -250px;
+    right: -250px;
+    background: radial-gradient(
+        circle,
+        rgba(198, 160, 90, 0.08) 0%,
+        rgba(198, 160, 90, 0) 70%
+    );
+    pointer-events: none;
+}
+
+
+/* HEADING */
+
+.problem-heading {
+    max-width: 900px;
+    margin-bottom: 80px;
+}
+
+.problem-label {
+    margin-bottom: 22px;
+    color: #c8a968;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.problem-heading h2 {
+    margin: 0;
+    max-width: 850px;
+
+    color: #e7c98f;
+
+    font-size: clamp(38px, 4.2vw, 64px);
+    font-weight: 300;
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+
+/* PROBLEM CARDS */
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+
+    border-top: 1px solid rgba(231, 201, 143, 0.22);
+    border-bottom: 1px solid rgba(231, 201, 143, 0.22);
+}
+
+.problem-card {
+    position: relative;
+
+    min-height: 360px;
+    padding: 42px 38px 45px;
+
+    border-right: 1px solid rgba(231, 201, 143, 0.18);
+}
+
+.problem-card:last-child {
+    border-right: none;
+}
+
+.problem-number {
+    display: block;
+    margin-bottom: 55px;
+
+    color: rgba(231, 201, 143, 0.45);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.problem-card h3 {
+    margin: 0 0 24px;
+
+    color: #e7c98f;
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 1px;
+}
+
+.problem-card p {
+    margin: 0;
+
+    max-width: 320px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.problem-line {
+    position: absolute;
+
+    left: 38px;
+    bottom: 0;
+
+    width: 45px;
+    height: 2px;
+
+    background: #c8a968;
+}
+
+
+/* WHO FEELS THIS */
+
+.problem-audience {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 60px;
+
+    padding: 55px 0;
+
+    border-bottom: 1px solid rgba(231, 201, 143, 0.18);
+}
+
+.problem-audience-label {
+    margin: 0;
+
+    color: #c8a968;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.problem-audience-text {
+    margin: 0;
+
+    max-width: 750px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+
+/* FINAL QUESTION */
+
+.problem-question {
+    max-width: 950px;
+
+    margin: 75px auto 0;
+
+    text-align: center;
+}
+
+.problem-question::before {
+    content: "";
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    margin: 0 auto 30px;
+
+    background: #c8a968;
+}
+
+.problem-question p {
+    margin: 0;
+
+    color: #e7c98f;
+
+    font-size: clamp(20px, 2.2vw, 30px);
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   THE PROBLEM - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .problem {
+        padding: 90px 0;
+    }
+
+    .problem-heading {
+        margin-bottom: 55px;
+    }
+
+    .problem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-card {
+        min-height: auto;
+        padding: 35px 25px 40px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(231, 201, 143, 0.15);
+    }
+
+    .problem-card:last-child {
+        border-bottom: none;
+    }
+
+    .problem-number {
+        margin-bottom: 25px;
+    }
+
+    .problem-line {
+        left: 25px;
+    }
+
+    .problem-audience {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+
+/* =========================
+   THE PROBLEM - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .problem {
+        padding: 75px 0 85px;
+    }
+
+    .problem-heading {
+        margin-bottom: 45px;
+    }
+
+    .problem-label {
+        margin-bottom: 17px;
+
+        font-size: 9px;
+        letter-spacing: 3.5px;
+    }
+
+    .problem-heading h2 {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.17;
+    }
+
+    .problem-card {
+        padding: 30px 22px 36px;
+    }
+
+    .problem-number {
+        margin-bottom: 22px;
+    }
+
+    .problem-card h3 {
+        margin-bottom: 16px;
+
+        font-size: 18px;
+    }
+
+    .problem-card p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .problem-line {
+        left: 22px;
+    }
+
+    .problem-audience {
+        padding: 40px 22px;
+    }
+
+    .problem-audience-text {
+        font-size: 12.5px;
+        line-height: 1.75;
+    }
+
+    .problem-question {
+        margin-top: 55px;
+    }
+
+    .problem-question p {
+        font-size: 19px;
+        line-height: 1.55;
+    }
+}
+/* ==================================================
+   ROYA - GLOBAL TYPOGRAPHY SYSTEM
+   KEEP THIS AT THE VERY END OF STYLE.CSS
+================================================== */
+
+
+/* ---------- SECTION LABELS ---------- */
+
+.section-label,
+.problem-label,
+.market-label,
+.ecosystem-label,
+.voice-exit-label,
+.why-label,
+.why-roya-label {
+    font-family: Arial, Helvetica, sans-serif !important;
+
+    font-size: 15px !important;
+    font-weight: 500 !important;
+
+    line-height: 1.3 !important;
+    letter-spacing: 3px !important;
+
+    color: #b99b67 !important;
+}
+/* ==================================================
+   THE PROBLEM - FINAL TYPOGRAPHY FIX
+================================================== */
+
+.problem-heading h2 {
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: clamp(34px, 3vw, 44px) !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.15 !important;
+
+    letter-spacing: 1px !important;
+
+    color: #e4c48a !important;
+}
+
+
+/* THE PROBLEM LABEL */
+
+.problem-label {
+    font-family: Arial, Helvetica, sans-serif !important;
+
+    font-size: 15px !important;
+
+    font-weight: 500 !important;
+
+    line-height: 1.3 !important;
+
+    letter-spacing: 3px !important;
+
+    color: #b99b67 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .problem-label {
+        font-size: 12px !important;
+        letter-spacing: 2.5px !important;
+    }
+
+    .problem-heading h2 {
+        font-size: clamp(28px, 7vw, 33px) !important;
+        line-height: 1.15 !important;
+    }
+}
+/* ==================================================
+   ABSOLUTE FINAL HEADING SYSTEM
+   ALL SECTION HEADINGS = SAME SIZE
+================================================== */
+
+/* SMALL SECTION LABELS */
+.problem-label,
+.market-label,
+.ecosystem-label,
+.section-label,
+.voice-exit-label {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 3px !important;
+}
+
+
+/* ALL LARGE SECTION HEADINGS */
+.problem-heading h2,
+.market-heading h2,
+.ecosystem-heading h2,
+.section-title,
+.how-title,
+.portfolio-heading h2,
+.voice-exit-heading h2,
+.vision-title,
+.vision-original-title {
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: 44px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 1px !important;
+
+    color: #e4c48a !important;
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    .problem-heading h2,
+    .market-heading h2,
+    .ecosystem-heading h2,
+    .section-title,
+    .how-title,
+    .portfolio-heading h2,
+    .voice-exit-heading h2,
+    .vision-title,
+    .vision-original-title {
+        font-size: 38px !important;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .problem-label,
+    .market-label,
+    .ecosystem-label,
+    .section-label,
+    .voice-exit-label {
+        font-size: 12px !important;
+        letter-spacing: 2.5px !important;
+    }
+
+    .problem-heading h2,
+    .market-heading h2,
+    .ecosystem-heading h2,
+    .section-title,
+    .how-title,
+    .portfolio-heading h2,
+    .voice-exit-heading h2,
+    .vision-title,
+    .vision-original-title {
+        font-size: 32px !important;
+        line-height: 1.15 !important;
+    }
+}
+/* ==================================================
+   ROYA SECTION BACKGROUNDS
+================================================== */
+
+.bg-back1 {
+    background-image: url("../assets/images/back1.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.bg-back2 {
+    background-image: url("../assets/images/back2.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.bg-back3 {
+    background-image: url("../assets/images/back3.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.bg-back4 {
+    background-image: url("../assets/images/back4.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* Keep all section content above existing decorative glows */
+.bg-back1 > .container,
+.bg-back2 > .container,
+.bg-back3 > .container,
+.bg-back4 > .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .bg-back1,
+    .bg-back2,
+    .bg-back3,
+    .bg-back4 {
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+
+}
+/* ==================================================
+   WHY ROYA - DARK GLASS CARDS
+================================================== */
+
+.why-roya-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+
+    margin-top: 60px !important;
+
+    /* Remove the old continuous box/grid appearance */
+    border: none !important;
+    background: transparent !important;
+}
+
+
+/* Individual cards */
+.why-roya-card {
+    position: relative !important;
+
+    min-height: 380px !important;
+
+    padding: 38px 38px 34px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    /* Dark layer over the decorative background */
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.50) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+    overflow: hidden !important;
+}
+
+
+/* Remove old separators between cards */
+.why-roya-card + .why-roya-card {
+    border-left: 1px solid rgba(210, 173, 105, 0.50) !important;
+}
+
+
+/* Card number */
+.why-roya-number {
+    display: block !important;
+
+    margin-bottom: 42px !important;
+
+    color: #d7ad67 !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+
+    letter-spacing: 2px !important;
+}
+
+
+/* Card titles */
+.why-roya-card h3 {
+    margin: 0 0 26px !important;
+
+    color: #e3bd76 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 29px !important;
+    font-weight: 400 !important;
+
+    line-height: 1.15 !important;
+    letter-spacing: 0.3px !important;
+}
+
+
+/* Description */
+.why-roya-card p {
+    max-width: 330px !important;
+
+    margin: 0 !important;
+
+    color: rgba(240, 240, 240, 0.82) !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+
+    line-height: 1.7 !important;
+}
+
+
+/* Small gold line at bottom */
+.why-roya-line {
+    display: block !important;
+
+    width: 76px !important;
+    height: 1px !important;
+
+    margin-top: auto !important;
+
+    background: #cfa761 !important;
+    opacity: 0.9 !important;
+}
+
+
+/* Subtle highlight inside each card */
+.why-roya-card::before {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    border-radius: inherit !important;
+
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(42, 96, 165, 0.10),
+            transparent 38%
+        ) !important;
+
+    pointer-events: none !important;
+}
+
+
+/* Make actual content sit above the subtle highlight */
+.why-roya-card > * {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+
+/* ==================================================
+   WHY ROYA - TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .why-roya-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .why-roya-card {
+        min-height: 300px !important;
+    }
+
+}
+
+
+/* ==================================================
+   WHY ROYA - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .why-roya-grid {
+        margin-top: 40px !important;
+        gap: 16px !important;
+    }
+
+    .why-roya-card {
+        min-height: 290px !important;
+
+        padding: 30px 26px !important;
+
+        border-radius: 14px !important;
+    }
+
+    .why-roya-number {
+        margin-bottom: 32px !important;
+    }
+
+    .why-roya-card h3 {
+        font-size: 25px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .why-roya-card p {
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+    }
+
+}
+/* ==================================================
+   UNIFIED DARK GLASS CARDS
+   Tokenization / Ecosystem / Problem
+   How It Works / Our Vision
+================================================== */
+
+
+/* --------------------------------------------------
+   1. TOKENIZATION - 3 CARDS
+-------------------------------------------------- */
+
+.tokenization-grid {
+    gap: 24px !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.tokenization-card {
+    min-height: 390px !important;
+    padding: 38px 38px 34px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.50) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+    overflow: hidden !important;
+}
+
+.tokenization-card + .tokenization-card {
+    border-left: 1px solid rgba(210, 173, 105, 0.50) !important;
+}
+
+
+/* --------------------------------------------------
+   2. ECOSYSTEM - 3 LOWER CARDS
+-------------------------------------------------- */
+
+.ecosystem-grid {
+    gap: 24px !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.ecosystem-card {
+    min-height: 390px !important;
+    padding: 38px 38px 34px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.50) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+    overflow: hidden !important;
+}
+
+.ecosystem-card + .ecosystem-card {
+    border-left: 1px solid rgba(210, 173, 105, 0.50) !important;
+}
+
+
+/* ROYA GROUP top box */
+.ecosystem-group {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.96),
+            rgba(8, 17, 31, 0.91)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.50) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.25) !important;
+}
+
+
+/* --------------------------------------------------
+   3. THE PROBLEM - 3 CARDS
+-------------------------------------------------- */
+
+.problem-grid {
+    gap: 24px !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.problem-card {
+    min-height: 360px !important;
+    padding: 38px 38px 34px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.50) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+    overflow: hidden !important;
+}
+
+.problem-card + .problem-card {
+    border-left: 1px solid rgba(210, 173, 105, 0.50) !important;
+}
+
+.problem-line {
+    margin-top: auto !important;
+}
+
+
+/* WHO FEELS THIS */
+.problem-audience {
+    margin-top: 24px !important;
+    padding: 30px 34px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.92),
+            rgba(8, 17, 31, 0.86)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.35) !important;
+    border-radius: 16px !important;
+}
+
+
+/* THE QUESTION */
+.problem-question {
+    margin-top: 24px !important;
+    padding: 38px 42px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.45) !important;
+    border-radius: 16px !important;
+}
+
+
+/* --------------------------------------------------
+   4. HOW IT WORKS - EXISTING 4 CARDS
+-------------------------------------------------- */
+
+.how-steps {
+    gap: 18px !important;
+}
+
+.how-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.45) !important;
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.24) !important;
+}
+
+
+/* --------------------------------------------------
+   5. OUR VISION - EXISTING 4 CARDS
+-------------------------------------------------- */
+
+.vision-original-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.95),
+            rgba(8, 17, 31, 0.89)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.45) !important;
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.24) !important;
+}
+
+
+/* --------------------------------------------------
+   CONSISTENT TEXT READABILITY
+-------------------------------------------------- */
+
+.tokenization-card p,
+.ecosystem-card p,
+.problem-card p,
+.how-card p,
+.vision-original-card p {
+    color: rgba(240, 240, 240, 0.82) !important;
+}
+
+
+/* --------------------------------------------------
+   MOBILE / TABLET
+-------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .tokenization-grid,
+    .ecosystem-grid,
+    .problem-grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+
+    .tokenization-card,
+    .ecosystem-card,
+    .problem-card {
+        min-height: 300px !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .tokenization-card,
+    .ecosystem-card,
+    .problem-card {
+        min-height: 280px !important;
+        padding: 30px 26px !important;
+        border-radius: 14px !important;
+    }
+
+    .problem-audience,
+    .problem-question {
+        padding: 26px 24px !important;
+        border-radius: 14px !important;
+    }
+}
+/* ==================================================
+   TOKENIZATION TYPOGRAPHY
+   Match WHY ROYA
+================================================== */
+
+/* Small top label */
+.tokenization-label {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 3px !important;
+    color: #b99b67 !important;
+}
+
+
+/* Main heading */
+.tokenization-heading h2 {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 44px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 1px !important;
+    color: #e4c48a !important;
+}
+
+
+/* Intro text */
+.tokenization-intro {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+
+/* Card headings */
+.tokenization-card h3 {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 29px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.3px !important;
+    color: #e3bd76 !important;
+}
+
+
+/* Card descriptions */
+.tokenization-card p {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+
+/* Numbers */
+.tokenization-number {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px !important;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .tokenization-label {
+        font-size: 12px !important;
+        letter-spacing: 2.5px !important;
+    }
+
+    .tokenization-heading h2 {
+        font-size: 32px !important;
+        line-height: 1.15 !important;
+    }
+
+    .tokenization-card h3 {
+        font-size: 25px !important;
+    }
+
+    .tokenization-card p {
+        font-size: 14px !important;
+    }
+}
+
+/* ==================================================
+   HOME PAGE PREVIEWS
+   Add this block to the END of css/style.css
+================================================== */
+
+.home-preview {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+    background: #07080c;
+    border-top: 1px solid rgba(205, 165, 96, 0.14);
+}
+
+.home-preview:nth-of-type(even) {
+    background:
+        radial-gradient(circle at 85% 20%, rgba(21, 67, 126, 0.16), transparent 35%),
+        #07080c;
+}
+
+.home-preview-heading {
+    max-width: 850px;
+    margin-bottom: 54px;
+}
+
+.home-preview-label {
+    margin: 0 0 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #c7a05f;
+}
+
+.home-preview-heading h2,
+.home-preview-vision h2 {
+    margin: 0;
+    max-width: 900px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0.5px;
+    color: #e4c48a;
+}
+
+.home-preview-heading > p:last-child {
+    max-width: 690px;
+    margin: 26px 0 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(238, 238, 238, 0.70);
+}
+
+.home-preview-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.home-preview-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.home-preview-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-preview-card {
+    min-height: 285px;
+    padding: 30px 28px;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(145deg, rgba(8, 14, 25, 0.96), rgba(10, 18, 31, 0.90));
+    border: 1px solid rgba(210, 173, 105, 0.36);
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.home-preview-number {
+    margin-bottom: 42px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #cfa761;
+}
+
+.home-preview-card h3 {
+    margin: 0 0 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.18;
+    color: #e3bd76;
+}
+
+.home-preview-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(240, 240, 240, 0.72);
+}
+
+.home-preview-link {
+    width: fit-content;
+    margin-top: 38px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid rgba(207, 167, 97, 0.70);
+    color: #d9b36f;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.home-preview-link:hover {
+    gap: 18px;
+    color: #f0d39a;
+}
+
+.home-preview-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.home-preview-market-list {
+    border-top: 1px solid rgba(210, 173, 105, 0.30);
+}
+
+.home-preview-market-list > div {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 20px;
+    align-items: center;
+    min-height: 105px;
+    border-bottom: 1px solid rgba(210, 173, 105, 0.22);
+}
+
+.home-preview-market-list span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #cfa761;
+}
+
+.home-preview-market-list h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #e3bd76;
+}
+
+.home-preview-vision-inner {
+    max-width: 1050px;
+}
+
+.home-preview-vision h2 {
+    max-width: 780px;
+    margin-bottom: 32px;
+}
+
+.home-preview-vision-text {
+    max-width: 690px;
+    margin: 0 0 16px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(240, 240, 240, 0.72);
+}
+
+@media (max-width: 1050px) {
+    .home-preview-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-preview-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .home-preview-split {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-preview {
+        padding: 75px 0;
+    }
+
+    .home-preview-heading {
+        margin-bottom: 38px;
+    }
+
+    .home-preview-label {
+        font-size: 11px;
+        letter-spacing: 2.4px;
+    }
+
+    .home-preview-heading h2,
+    .home-preview-vision h2 {
+        font-size: 34px;
+        line-height: 1.08;
+    }
+
+    .home-preview-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .home-preview-card {
+        min-height: 245px;
+        padding: 26px 24px;
+    }
+
+    .home-preview-number {
+        margin-bottom: 30px;
+    }
+
+    .home-preview-card h3 {
+        font-size: 22px;
+    }
+
+    .home-preview-market-list > div {
+        grid-template-columns: 48px 1fr;
+        min-height: 90px;
+    }
+
+    .home-preview-market-list h3 {
+        font-size: 21px;
+    }
+}
+/* ==================================================
+   HOME - COMPACT EXPLORE ROYA
+   Add this block to the END of css/style.css
+
+   IMPORTANT:
+   If you previously added the old "HOME PAGE PREVIEWS"
+   CSS block, you can remove it. This new section uses
+   different class names, so leaving it will not break
+   the page, but it is no longer needed.
+================================================== */
+
+.explore-roya {
+    position: relative;
+    padding: 105px 0 115px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 78% 50%,
+            rgba(20, 70, 135, 0.16),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 18% 85%,
+            rgba(177, 130, 55, 0.07),
+            transparent 30%
+        ),
+        #07090e;
+
+    border-top: 1px solid rgba(210, 173, 105, 0.14);
+}
+
+
+.explore-roya-heading {
+    max-width: 760px;
+    margin-bottom: 52px;
+}
+
+
+.explore-roya-label {
+    margin: 0 0 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+    color: #bd9a60;
+}
+
+
+.explore-roya-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 4vw, 54px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: 0.5px;
+
+    color: #e4c48a;
+}
+
+
+.explore-roya-heading > p:last-child {
+    max-width: 610px;
+    margin: 22px 0 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+
+    color: rgba(240, 240, 240, 0.66);
+}
+
+
+/* ONE LARGE PANEL — DIVIDED INTO FOUR AREAS */
+
+.explore-roya-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        );
+
+    border: 1px solid rgba(210, 173, 105, 0.42);
+    border-radius: 20px;
+
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+
+/* EACH QUARTER */
+
+.explore-roya-item {
+    position: relative;
+
+    min-height: 310px;
+    padding: 34px 38px 36px;
+
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 18px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* vertical dividing line */
+.explore-roya-item:nth-child(odd) {
+    border-right: 1px solid rgba(210, 173, 105, 0.24);
+}
+
+
+/* horizontal dividing line */
+.explore-roya-item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(210, 173, 105, 0.24);
+}
+
+
+.explore-roya-item:hover {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(32, 90, 160, 0.12),
+            transparent 48%
+        ),
+        rgba(255, 255, 255, 0.012);
+}
+
+
+.explore-roya-number {
+    padding-top: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    color: #cba463;
+}
+
+
+.explore-roya-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.explore-roya-copy h3 {
+    margin: 0 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.3px;
+
+    color: #e3bd76;
+}
+
+
+.explore-roya-copy p {
+    max-width: 430px;
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+
+    color: rgba(240, 240, 240, 0.68);
+}
+
+
+.explore-roya-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: auto;
+    padding-top: 28px;
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid rgba(207, 167, 97, 0.65);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.7px;
+
+    color: #d5ad69;
+    text-decoration: none;
+
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.explore-roya-link:hover {
+    gap: 16px;
+    color: #f0d39a;
+    border-color: #f0d39a;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .explore-roya {
+        padding: 90px 0 100px;
+    }
+
+    .explore-roya-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-roya-item {
+        min-height: 260px;
+    }
+
+    .explore-roya-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .explore-roya-item:nth-child(-n + 3) {
+        border-bottom: 1px solid rgba(210, 173, 105, 0.24);
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .explore-roya {
+        padding: 72px 0 82px;
+    }
+
+    .explore-roya-heading {
+        margin-bottom: 36px;
+    }
+
+    .explore-roya-label {
+        font-size: 11px;
+        letter-spacing: 2.4px;
+    }
+
+    .explore-roya-heading h2 {
+        font-size: 34px;
+    }
+
+    .explore-roya-heading > p:last-child {
+        font-size: 14px;
+    }
+
+    .explore-roya-grid {
+        border-radius: 15px;
+    }
+
+    .explore-roya-item {
+        min-height: 245px;
+        padding: 28px 24px 30px;
+
+        grid-template-columns: 36px 1fr;
+        gap: 12px;
+    }
+
+    .explore-roya-copy h3 {
+        font-size: 23px;
+    }
+
+    .explore-roya-copy p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+/* ==================================================
+   OUR VISION - LABEL SIZE FIX
+================================================== */
+
+.vision-original-label {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 3px !important;
+    color: #b99b67 !important;
+}
+
+@media (max-width: 600px) {
+    .vision-original-label {
+        font-size: 12px !important;
+        letter-spacing: 2.5px !important;
+    }
+}
+/* ==================================================
+   OUR VISION - LEFT CONTENT CARD
+================================================== */
+
+.vision-original-intro {
+    position: relative !important;
+
+    padding: 42px 44px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.50) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+    overflow: hidden !important;
+}
+
+
+/* very subtle blue glow inside the card */
+.vision-original-intro::before {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    background:
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(35, 91, 160, 0.10),
+            transparent 42%
+        ) !important;
+
+    pointer-events: none !important;
+}
+
+
+/* keep text above the card effect */
+.vision-original-intro > * {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+
+/* make the body text easier to read */
+.vision-original-text {
+    color: rgba(240, 240, 240, 0.82) !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .vision-original-intro {
+        padding: 30px 26px !important;
+        border-radius: 14px !important;
+    }
+
+}
+/* ==================================================
+   HOW IT WORKS - LEFT CONTENT CARD
+================================================== */
+
+.how-intro {
+    position: relative !important;
+
+    padding: 42px 44px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 12, 23, 0.94),
+            rgba(8, 17, 31, 0.88)
+        ) !important;
+
+    border: 1px solid rgba(210, 173, 105, 0.50) !important;
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+
+    overflow: hidden !important;
+}
+
+
+/* subtle glow inside the card */
+.how-intro::before {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    background:
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(35, 91, 160, 0.10),
+            transparent 42%
+        ) !important;
+
+    pointer-events: none !important;
+}
+
+
+/* keep content above the effect */
+.how-intro > * {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+
+/* improve paragraph readability */
+.how-description {
+    color: rgba(240, 240, 240, 0.82) !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .how-intro {
+        padding: 30px 26px !important;
+        border-radius: 14px !important;
+    }
+
+}
+/* ==================================================
+   ROYA HEADER LOGO - FINAL SIZE
+================================================== */
+
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    overflow: visible !important;
+}
+
+.header-logo {
+    display: block !important;
+    width: auto !important;
+    height: 105px !important;
+    max-width: 170px !important;
+    object-fit: contain !important;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .header-logo {
+        height: 85px !important;
+        max-width: 140px !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .header-logo {
+        height: 68px !important;
+        max-width: 115px !important;
+    }
+}
+/* ==================================================
+   ROYA FOOTER LOGO
+================================================== */
+
+.footer-logo-link {
+    display: inline-block !important;
+    text-decoration: none !important;
+}
+
+.footer-logo-img {
+    display: block !important;
+    width: auto !important;
+    height: 125px !important;
+    object-fit: contain !important;
+}
+
+.footer-tagline {
+    margin-top: 18px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 10px !important;
+    letter-spacing: 3px !important;
+    color: rgba(210, 173, 105, 0.70) !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .footer-logo-img {
+        height: 95px !important;
+    }
+
+    .footer-tagline {
+        font-size: 9px !important;
+        letter-spacing: 2px !important;
+    }
+}
+/* ==================================================
+   MARKET CHART IMAGES - ROUNDED CORNERS FIX
+================================================== */
+
+.market-chart-image {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+
+    border-radius: 58px !important;
+    clip-path: inset(0 round 58px) !important;
+}
+/* ==================================================
+   HOME HERO - VIDEO BACKGROUND
+================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Animated background */
+
+.hero-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* Existing dark overlay */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+}
+
+
+/* Hero text */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Keep existing hero-features positioning */
+.hero-features {
+    z-index: 2 !important;
+}
+/* ==================================================
+   EXPLORE ROYA - ANIMATED BACKGROUND
+================================================== */
+
+.explore-roya {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+
+/* Video */
+
+.explore-background-video {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    z-index: 0 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* Dark layer so text remains readable */
+
+.explore-background-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+
+    background: rgba(2, 7, 15, 0.42) !important;
+
+    z-index: 1 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* Keep all Explore content above video */
+
+.explore-roya > .container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+/* ==================================================
+   SCROLL DOWN INDICATOR
+================================================== */
+
+.scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    color: #d2ad69;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    opacity: 0.8;
+
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-arrow {
+    display: block;
+
+    font-size: 19px;
+    line-height: 1;
+
+    animation: scrollArrowMove 1.7s ease-in-out infinite;
+}
+
+@keyframes scrollArrowMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: translateY(7px);
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+
+    .scroll-indicator {
+        bottom: 18px;
+        font-size: 8px;
+    }
+
+}
+.scroll-indicator {
+    left: auto !important;
+    right: 35px !important;
+    bottom: 28px !important;
+
+    transform: none !important;
+
+    width: auto !important;
+    margin: 0 !important;
+
+    align-items: center !important;
+}
+
+@media (max-width: 600px) {
+    .scroll-indicator {
+        left: auto !important;
+        right: 18px !important;
+        bottom: 18px !important;
+        transform: none !important;
+    }
+}
